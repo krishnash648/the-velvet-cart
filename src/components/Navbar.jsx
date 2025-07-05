@@ -40,7 +40,7 @@ const Navbar = () => {
               transition={{ duration: 0.5 }}
             >
               <img 
-                src="/logo.png" 
+                src="/the-velvet-cart/logo.png" 
                 alt="Velvet Cart Logo" 
                 className="w-8 h-8 object-contain"
               />
