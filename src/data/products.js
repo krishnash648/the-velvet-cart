@@ -56,11 +56,11 @@ const products = [
     description: 'Compact portable speaker with 360-degree sound, waterproof design, and 12-hour playback.',
     features: ['360° Sound', 'Waterproof', '12-hour Battery', 'Party Mode'],
     images: [
-      'https://images.unsplash.com/photo-1512446733611-9099a758e63c?auto=format&fit=crop&w=400&q=80',
+      'https://storio.in/cdn/shop/files/71kl33XC3pL.jpg?v=1736418030',
       'https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=400&q=80',
       'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80'
     ],
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoM5pX0lWvnGl6RF4j1QBQ5CUkAvE8Krxbjg&s',
+    image: 'https://storio.in/cdn/shop/files/71kl33XC3pL.jpg?v=1736418030',
     isNew: false,
     isOnSale: false,
     discount: 0

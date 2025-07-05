@@ -50,7 +50,7 @@ export default function ProductCard({ product, viewMode = 'grid' }) {
           <img
             src={product.image}
             alt={product.name}
-            className="w-32 h-20 object-cover rounded-lg border border-white/10"
+            className="w-32 h-20 object-contain rounded-lg border border-white/10"
           />
           {product.isNew && (
             <span className="absolute top-1 left-1 bg-green-500 text-white text-[9px] px-1.5 py-0.5 rounded-full font-semibold shadow">NEW</span>
@@ -116,11 +116,11 @@ export default function ProductCard({ product, viewMode = 'grid' }) {
       whileHover={{ scale: 1.025, y: -3, boxShadow: '0 4px 16px 0 rgba(80, 0, 120, 0.10)' }}
       className="bg-white/10 backdrop-blur-xl rounded-xl shadow border border-white/10 transition-all duration-300 flex flex-col overflow-hidden min-h-[300px] max-w-sm w-72"
     >
-      <div className="relative w-full flex justify-center items-center" style={{ aspectRatio: '4/5', minHeight: '240px', maxHeight: '320px' }}>
+      <div className="relative w-full flex justify-center items-center p-4" style={{ aspectRatio: '4/5', minHeight: '240px', maxHeight: '320px' }}>
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover object-center rounded-xl border border-white/20"
+          className="w-full h-full object-contain object-center rounded-xl border border-white/20 p-2"
           style={{ aspectRatio: '4/5', minHeight: '240px', maxHeight: '320px' }}
         />
         {product.isNew && (
