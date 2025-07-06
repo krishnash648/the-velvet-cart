@@ -16,7 +16,7 @@ const FeaturedProductsCarousel = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Show 3 on desktop, 1 on mobile
+  // It will Show 3 on desktop & 1 on mobile
   const slidesToShow = windowWidth >= 1024 ? 3 : 1;
   const maxIndex = featured.length - slidesToShow;
 
@@ -66,7 +66,6 @@ const FeaturedProductsCarousel = () => {
           ))}
         </div>
       </div>
-      {/* Dots */}
       <div className="flex justify-center gap-2 mt-6">
         {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
           <button
