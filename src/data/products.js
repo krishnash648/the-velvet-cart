@@ -78,7 +78,7 @@ const products = [
     description: 'High-precision gaming mouse with customizable RGB lighting and programmable buttons.',
     features: ['RGB Lighting', 'Programmable Buttons', 'High DPI Sensor', 'Ergonomic Design'],
     images: [
-      'https://archertechlab.com/cdn/shop/products/400-3_1200x1200_crop_center.png?v=1750658032'
+      'https://archertechlab.com/cdn/shop/products/400-3_1200x1200_crop_center.png?v=1750658032',
       'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80',
       'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
 
