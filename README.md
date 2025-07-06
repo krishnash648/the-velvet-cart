@@ -12,16 +12,16 @@ Welcome to **The Velvet Cart**, a modern React E-commerce Experience for seamles
 ## 📸 Screenshots
 
 ### Homepage
-![Homepage](/screenshots/homepage.jpeg)
+![Homepage](public/screenshots/homepage.jpeg)
 
 ### Featured Products
-![Featured Products](/screenshots/featured%20products.jpeg)
+![Featured Products](public/screenshots/featuredproducts.jpeg)
 
 ### Shopping Cart
-![Shopping Cart](/screenshots/shopping%20cart.jpeg)
+![Shopping Cart](public/screenshots/shoppingcart.jpeg)
 
 ### Admin Dashboard
-![Admin Dashboard](/screenshots/admin%20dashboard.jpeg)
+![Admin Dashboard](public/screenshots/admindashboard.jpeg)
 
 ---
 
