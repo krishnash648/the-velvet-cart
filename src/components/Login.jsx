@@ -31,12 +31,11 @@ const Login = ({ onSwitchToRegister }) => {
   return (
     <div className="w-full max-w-md p-0 m-0 flex flex-col items-center justify-center relative">
       <div className="relative w-full">
-        {/* Animated background */}
+
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-3xl blur-3xl animate-pulse z-0"></div>
         <div className="relative bg-white/40 backdrop-blur-2xl rounded-3xl p-8 border border-white/30 shadow-2xl overflow-hidden z-10">
-          {/* Gradient overlay */}
+
           <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-purple-100/20 to-pink-100/20 rounded-3xl pointer-events-none"></div>
-          {/* Header */}
           <div className="text-center mb-8">
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,10 +46,8 @@ const Login = ({ onSwitchToRegister }) => {
             <p className="text-gray-300">Sign in to your account</p>
           </div>
 
-          {/* Error */}
           {error && <div className="mb-4 text-red-400 text-center font-semibold">{error}</div>}
 
-          {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -106,14 +103,12 @@ const Login = ({ onSwitchToRegister }) => {
             </button>
           </form>
 
-          {/* Divider */}
           <div className="my-6 flex items-center">
             <div className="flex-1 border-t border-white/20"></div>
             <span className="px-4 text-gray-300 text-sm">or</span>
             <div className="flex-1 border-t border-white/20"></div>
           </div>
 
-          {/* Social Login */}
           <div className="space-y-3">
             <button
               type="button"
@@ -131,7 +126,6 @@ const Login = ({ onSwitchToRegister }) => {
             </button>
           </div>
 
-          {/* Switch to Register */}
           <div className="flex items-center justify-center gap-2 mt-8 pb-4">
             <span className="text-gray-300 text-base">
               Don't have an account?
