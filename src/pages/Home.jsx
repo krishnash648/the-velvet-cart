@@ -164,7 +164,7 @@ export default function Home() {
               <input
                 type="text"
                 placeholder="🔍 Search for products, brands, or categories..."
-                className="w-full px-8 py-4 bg-white/15 backdrop-blur-xl border border-white/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blush text-white placeholder-gray-300 text-lg shadow-2xl glow-hover"
+                className="w-full px-8 py-4 bg-white/15 backdrop-blur-xl border border-white/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blush text-white placeholder-white/60 text-lg shadow-2xl glow-hover"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -202,7 +202,7 @@ export default function Home() {
           <input
             type="text"
             placeholder="Search products..."
-            className="px-3 py-2 rounded-full bg-white/20 border-none text-white w-32 focus:outline-none focus:ring-2 focus:ring-blush text-sm placeholder-gray-300"
+            className="px-3 py-2 rounded-full bg-white/20 border-none text-white w-32 focus:outline-none focus:ring-2 focus:ring-blush text-sm placeholder-white/60"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -212,7 +212,7 @@ export default function Home() {
             onChange={(e) => setSortBy(e.target.value)}
           >
             {sortOptions.map((option) => (
-              <option key={option.value} value={option.value}>{option.label}</option>
+              <option key={option.value} value={option.value} className="text-gray-800 bg-white">{option.label}</option>
             ))}
           </select>
         </div>
@@ -281,27 +281,6 @@ export default function Home() {
           </div>
         </aside>
         <main className="flex-1">
-          <div className="mb-10">
-            <div className="flex items-center gap-3 mb-4">
-              <h2 className="text-xl font-bold gradient-text">Recommended for You</h2>
-              <div className="text-xl">✨</div>
-            </div>
-            <div className="recommended-scroll">
-              {user && getRecommendations(productsData, 4).map((product, index) => (
-                <motion.div
-                  key={product.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.025, y: -3 }}
-                  className=""
-                  style={{ minWidth: 280, maxWidth: 280 }}
-                >
-                  <ProductCard product={product} viewMode="grid" />
-        </motion.div>
-              ))}
-            </div>
-          </div>
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -326,6 +305,28 @@ export default function Home() {
               <div className="col-span-full text-center text-xl text-white/70 py-20">No products found.</div>
             )}
           </motion.div>
+          
+          <div className="mt-10">
+            <div className="flex items-center gap-3 mb-4">
+              <h2 className="text-xl font-bold gradient-text">Recommended for You</h2>
+              <div className="text-xl">✨</div>
+            </div>
+            <div className="recommended-scroll">
+              {user && getRecommendations(productsData, 4).map((product, index) => (
+                <motion.div
+                  key={product.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.025, y: -3 }}
+                  className=""
+                  style={{ minWidth: 280, maxWidth: 280 }}
+                >
+                  <ProductCard product={product} viewMode="grid" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </main>
       </div>
 
