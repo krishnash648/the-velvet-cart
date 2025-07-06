@@ -5,19 +5,27 @@
 ![GitHub stars](https://img.shields.io/github/stars/krishnash648/the-velvet-cart?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/krishnash648/the-velvet-cart)
 
-Welcome to **The Velvet Cart**, a ✨ _modern React E-commerce Experience_ ✨ for seamless shopping, beautiful product discovery, and a frictionless checkout.
-
-Crafted by **Krishna Sharma**, this store features:
-- 🛍️ Customizable product views
-- 🔍 Live search & smart filtering
-- 🛒 Advanced cart & checkout
-- 💳 Razorpay payment integration
-- 🎨 Modern, glassy UI with Tailwind
-- 📱 Mobile-first, responsive design
+Welcome to **The Velvet Cart**, a modern React E-commerce Experience for seamless shopping, beautiful product discovery, and a frictionless checkout.
 
 ---
 
-## 🌐 Live Demo
+## 📸 Screenshots
+
+### Homepage
+![Homepage](/screenshots/homepage.jpeg)
+
+### Featured Products
+![Featured Products](/screenshots/featured%20products.jpeg)
+
+### Shopping Cart
+![Shopping Cart](/screenshots/shopping%20cart.jpeg)
+
+### Admin Dashboard
+![Admin Dashboard](/screenshots/admin%20dashboard.jpeg)
+
+---
+
+## 🌟 Live Demo
 
 👉 [**See The Velvet Cart in action**](https://krishnash648.github.io/the-velvet-cart)
 
@@ -25,64 +33,75 @@ Crafted by **Krishna Sharma**, this store features:
 
 ## ✨ Features
 
-- 🛍️ **Comprehensive Product Catalog** — Realistic products, categories, brands
-- 🔍 **Live Search & Filtering** — Instantly find and filter products
-- 🛒 **Advanced Cart** — Add, remove, adjust, validate, and get real-time totals
-- 💳 **Checkout & Payments** — Multi-step checkout, Razorpay, UPI, cards, and more
-- 🎨 **Modern UI/UX** — Glassmorphism, gradients, smooth animations
-- 📱 **Mobile-Optimized** — Responsive layouts, touch-friendly
-- 🏷️ **Promo Banners & Trust Badges** — Build trust and highlight deals
-- 🌟 **Customer Reviews** — Real profile photos, vibrant avatars
-- 🧭 **Enhanced Navigation** — Smart navbar, sticky, search, cart, user menu
-- 📊 **Product Details** — Gallery, features, reviews, stock, discounts
-- 🧰 **Context-based State** — Cart, wishlist, and more
-- ⚡ **Lightning Fast** — Optimized for speed and smoothness
+### 🛍️ Product Discovery & Shopping
+- Comprehensive product catalog with categories, brands, and images
+- Live search bar with instant results
+- Advanced filters: price range, brand, rating (with mobile drawer)
+- Product comparison, recently viewed, and wishlist
+- Product reviews, ratings, and testimonials
+- Animated product cards and micro-interactions
+- Loading skeletons for all major pages
+- Custom scrollbars and modern glassmorphism UI
+- Responsive design for mobile and desktop
 
----
+### 🛒 Cart, Checkout & Orders
+- Add, remove, and update cart items
+- Wishlist management
+- Multi-step checkout flow
+- Order tracking with status timeline
+- Order history and downloadable invoices
+- Trust badges and payment method logos
 
-## 🛠️ Tech Stack
+### 🎨 UI/UX & Theming
+- Dark/Light theme toggle with system preference and persistence
+- Theme variables for all components (background, text, card, border, etc.)
+- Smooth transitions and focus rings for accessibility
+- Sticky, animated navbar and enhanced footer
+- Modern section dividers and promo/category banners
 
-- **React**
-- **Tailwind CSS**
-- **Framer Motion**
-- **React Router DOM**
-- **React Hot Toast**
-- **Razorpay**
-- **Context API**
+### 🏪 Admin Dashboard
+- Fake admin login (admin/admin123) for demo/testing
+- Product management: CRUD, bulk actions, image upload
+- Order management: search, filter, status updates, order details
+- User management: search, filter, block/unblock, role management
+- Analytics dashboard: sales, top products, user growth (Chart.js)
+- Notification bell with dropdown
+- Loading skeletons and confirmation dialogs
+
+### 🤖 AI & Smart Features
+- Floating AI chatbot with smart, context-aware responses
+- Product recommendations based on user behavior
+- Personalized/trending recommendations on homepage
+
+### 🔐 Authentication & User Roles
+- Firebase authentication (email/password, Google)
+- User profiles with order history and wishlist
+- Role-based access (admin/user)
+- Secure session management
+
+### 🛠️ Technical Highlights
+- React 18, Tailwind CSS, Framer Motion, React Router
+- Context API for state management (cart, auth, theme, etc.)
+- Firebase for auth and Firestore
+- Chart.js for analytics
+- Code splitting and lazy loading for performance
+- Local storage for theme and preferences
+- Error handling and user feedback
 
 ---
 
 ## 🚀 Getting Started
 
 ```bash
-# 1️⃣ Install dependencies
+# Install dependencies
 npm install
 
-# 2️⃣ Start the dev server
+# Start the dev server
 npm start
 
-# 3️⃣ Build for production
+# Build for production
 npm run build
 ```
-
-
----
-
-## 🏆 What's Next (Planned Features)
-
-- 🔐 User authentication & profiles
-- 💖 Wishlist with Firestore
-- 📝 Product reviews & ratings
-- 🚚 Order tracking
-- 🛠️ Admin dashboard
-- 🤖 Product recommendations
-- 📧 Email notifications
-- 📦 Inventory management
-- 📊 Sales analytics
-- 🧾 Downloadable invoices
-- 🌍 Internationalization
-- 🗂️ Category/brand management (admin)
-- 🛡️ Enhanced security & validation
 
 ---
 

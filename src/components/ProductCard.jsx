@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
 import { toast } from 'react-hot-toast';
+import { addToComparison } from './ProductComparison';
 
 export default function ProductCard({ product, viewMode = 'grid' }) {
   const auth = useAuth();
@@ -15,6 +16,15 @@ export default function ProductCard({ product, viewMode = 'grid' }) {
       removeFromWishlist(product.id);
     } else {
       addToWishlist(product);
+    }
+  };
+
+  const handleCompare = () => {
+    const success = addToComparison(product);
+    if (success) {
+      toast.success('Added to comparison!');
+    } else {
+      toast.error('Product is already in comparison or comparison is full');
     }
   };
   
@@ -96,6 +106,15 @@ export default function ProductCard({ product, viewMode = 'grid' }) {
             >
               {isInWishlist && isInWishlist(product.id) ? '❤️' : '🤍'}
             </motion.button>
+            <motion.button
+              onClick={handleCompare}
+              className="p-1 rounded-full bg-white/10 text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-200 border border-white/10"
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.95 }}
+              title="Add to comparison"
+            >
+              ⚖️
+            </motion.button>
             <Link
               to={`/product/${product.id}`}
               className="px-2 py-1 rounded-full bg-gradient-to-r from-blush to-purple-600 text-white text-[10px] font-semibold shadow hover:scale-105 transition"
@@ -162,6 +181,15 @@ export default function ProductCard({ product, viewMode = 'grid' }) {
             whileTap={{ scale: 0.95 }}
           >
             {isInWishlist && isInWishlist(product.id) ? '❤️' : '🤍'}
+          </motion.button>
+          <motion.button
+            onClick={handleCompare}
+            className="p-1 rounded-full bg-white/10 text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-200 border border-white/10"
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
+            title="Add to comparison"
+          >
+            ⚖️
           </motion.button>
       <Link
         to={`/product/${product.id}`}

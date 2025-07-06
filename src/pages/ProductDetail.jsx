@@ -1,16 +1,27 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import products from '../data/products';
 import { useCart } from '../context/CartContext';
 import { motion } from 'framer-motion';
+import ReviewsSection from '../components/ReviewsSection';
+import { addToRecentlyViewed } from '../components/RecentlyViewed';
+import PriceAlertModal from '../components/PriceAlertModal';
 
 export default function ProductDetail() {
   const { id } = useParams();
   const { addToCart } = useCart();
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
+  const [showPriceAlert, setShowPriceAlert] = useState(false);
 
   const product = products.find((p) => p.id === parseInt(id));
+
+  // Add to recently viewed when product is loaded
+  useEffect(() => {
+    if (product) {
+      addToRecentlyViewed(product);
+    }
+  }, [product]);
 
   if (!product) {
     return (
@@ -154,6 +165,13 @@ export default function ProductDetail() {
                 <button className="p-2 rounded-full bg-pink-600 hover:bg-pink-700 text-xl text-white shadow-lg" title="Add to Wishlist">
                   <span>❤️</span>
                 </button>
+                <button 
+                  className="p-2 rounded-full bg-orange-600 hover:bg-orange-700 text-xl text-white shadow-lg" 
+                  title="Set Price Alert"
+                  onClick={() => setShowPriceAlert(true)}
+                >
+                  <span>📧</span>
+                </button>
               </div>
             </div>
 
@@ -254,24 +272,15 @@ export default function ProductDetail() {
           transition={{ delay: 0.3 }}
           className="mt-16"
         >
-          <h2 className="text-2xl font-bold mb-6">Customer Reviews</h2>
-          <div className="bg-white/5 rounded-xl p-6">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blush">{product.rating}</div>
-                <div className="text-yellow-500 text-lg">{renderStars(product.rating)}</div>
-                <div className="text-sm text-gray-400">{product.reviews} reviews</div>
-              </div>
-              <div className="flex-1">
-                <p className="text-gray-300">
-                  Customers love this product! Based on {product.reviews} reviews, 
-                  this item has an average rating of {product.rating} out of 5 stars.
-                </p>
-              </div>
-            </div>
-          </div>
+          <ReviewsSection productId={product.id} productName={product.name} />
         </motion.div>
       </div>
+
+      <PriceAlertModal 
+        product={product}
+        isOpen={showPriceAlert}
+        onClose={() => setShowPriceAlert(false)}
+      />
     </motion.div>
   );
 }

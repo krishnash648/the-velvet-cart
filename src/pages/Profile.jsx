@@ -1,11 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import { toast } from 'react-hot-toast';
+import WishlistItem from '../components/WishlistItem';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 const Profile = () => {
-  const { user, updateProfile, logout } = useAuth();
-  const { clearCart } = useCart();
+  const { user, updateProfile, logout, wishlist } = useAuth();
+  const { clearCart, addToCart } = useCart();
+  const location = useLocation();
   const [activeTab, setActiveTab] = useState('profile');
   const [isEditing, setIsEditing] = useState(false);
   const [editForm, setEditForm] = useState({
@@ -15,6 +19,14 @@ const Profile = () => {
     phone: user?.phone || '',
     address: user?.address || ''
   });
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const tab = params.get('tab');
+    if (tab && ['profile', 'orders', 'wishlist', 'preferences'].includes(tab)) {
+      setActiveTab(tab);
+    }
+  }, [location.search]);
 
   const handleEditChange = (e) => {
     setEditForm({
@@ -272,13 +284,55 @@ const Profile = () => {
 
             {activeTab === 'wishlist' && (
               <div>
-                <h2 className="text-2xl font-bold text-white mb-6">My Wishlist</h2>
-                {/* Wishlist content will be implemented */}
-                <div className="text-center py-12">
-                  <div className="text-6xl mb-4">❤️</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Wishlist coming soon!</h3>
-                  <p className="text-gray-300">This feature will be available in the next update.</p>
+                <div className="flex justify-between items-center mb-6">
+                  <h2 className="text-2xl font-bold text-white">My Wishlist</h2>
+                  <div className="text-sm text-gray-400">
+                    {wishlist.length} {wishlist.length === 1 ? 'item' : 'items'}
+                  </div>
                 </div>
+                
+                {wishlist.length > 0 ? (
+                  <div className="space-y-6">
+                    <div className="flex justify-between items-center mb-4">
+                      <button
+                        onClick={() => {
+                          wishlist.forEach(product => {
+                            if (product.stock > 0) {
+                              addToCart({ ...product, quantity: 1 });
+                            }
+                          });
+                          toast.success(`Added ${wishlist.filter(p => p.stock > 0).length} items to cart! 🛒`);
+                        }}
+                        className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-xl font-medium hover:from-green-700 hover:to-blue-700 transition-all duration-300"
+                      >
+                        Move All to Cart
+                      </button>
+                    </div>
+                    <AnimatePresence>
+                      {wishlist.map((product) => (
+                        <WishlistItem key={product.id} product={product} />
+                      ))}
+                    </AnimatePresence>
+                  </div>
+                ) : (
+                  <motion.div 
+                    className="text-center py-12"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                  >
+                    <div className="text-6xl mb-4">❤️</div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Your wishlist is empty</h3>
+                    <p className="text-gray-300 mb-6">Start adding products to your wishlist to see them here!</p>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-xl font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+                      onClick={() => window.location.href = '/'}
+                    >
+                      Start Shopping
+                    </motion.button>
+                  </motion.div>
+                )}
               </div>
             )}
 

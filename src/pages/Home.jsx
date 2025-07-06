@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
 import FeaturedProductsCarousel from '../components/FeaturedProductsCarousel';
 import TrustBadgesRow from '../components/TrustBadgesRow';
+import RecentlyViewed from '../components/RecentlyViewed';
+import ProductComparison from '../components/ProductComparison';
 import { useNavigate } from 'react-router-dom';
 
 const categories = ['All', 'Audio', 'Wearables', 'Accessories', 'Electronics'];
@@ -91,20 +93,20 @@ export default function Home() {
   };
 
   return (
-    <motion.div className="p-0 bg-night min-h-screen text-white particles">
+    <motion.div className="p-0 bg-bg min-h-screen text-text theme-transition">
       <style>{`
         ::-webkit-scrollbar { width: 8px; background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #a855f7cc; border-radius: 8px; }
-        .sidebar-glass { background: rgba(40, 20, 60, 0.45); box-shadow: 0 4px 32px 0 #a855f7cc, 0 1.5px 8px 0 #fff1; border: 1.5px solid #a855f7cc; border-left: none; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 1.5rem; border-bottom-right-radius: 1.5rem; backdrop-filter: blur(18px); min-width: 250px; max-width: 270px; margin-left: 0; position: relative; left: 0; }
+        ::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 8px; }
+        .sidebar-glass { background: rgba(40, 20, 60, 0.45); box-shadow: 0 4px 32px 0 var(--color-primary), 0 1.5px 8px 0 rgba(255,255,255,0.1); border: 1.5px solid var(--color-primary); border-left: none; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 1.5rem; border-bottom-right-radius: 1.5rem; backdrop-filter: blur(18px); min-width: 250px; max-width: 270px; margin-left: 0; position: relative; left: 0; }
         .sidebar-btn { transition: all 0.18s; }
-        .sidebar-btn:hover { background: #a855f7cc !important; color: #fff !important; box-shadow: 0 2px 8px #a855f7aa; }
-        .sidebar-btn.active { background: linear-gradient(90deg,#a855f7,#f472b6); color: #fff; box-shadow: 0 2px 12px #a855f7cc; }
-        .price-slider::-webkit-slider-thumb { background: #a855f7; border: 2px solid #fff; border-radius: 50%; width: 18px; height: 18px; box-shadow: 0 2px 8px #a855f7aa; }
+        .sidebar-btn:hover { background: var(--color-primary) !important; color: #fff !important; box-shadow: 0 2px 8px var(--color-primary); }
+        .sidebar-btn.active { background: linear-gradient(90deg,var(--color-primary),var(--color-secondary)); color: #fff; box-shadow: 0 2px 12px var(--color-primary); }
+        .price-slider::-webkit-slider-thumb { background: var(--color-primary); border: 2px solid #fff; border-radius: 50%; width: 18px; height: 18px; box-shadow: 0 2px 8px var(--color-primary); }
         .recommended-scroll { display: flex; gap: 2rem; overflow-x: auto; padding-bottom: 8px; margin-bottom: 2.5rem; scrollbar-width: thin; }
         .recommended-scroll::-webkit-scrollbar { height: 8px; background: transparent; }
-        .recommended-scroll::-webkit-scrollbar-thumb { background: #a855f7cc; border-radius: 8px; }
-        .separate-card { background: #1a1024; border: 2.5px solid #a855f7; border-radius: 2.2rem; box-shadow: 0 16px 48px 0 #a855f7cc, 0 4px 16px #fff3; margin: 1.5rem; transition: box-shadow 0.18s, transform 0.18s; min-width: 220px; max-width: 240px; }
-        .separate-card:hover { transform: translateY(-18px) scale(1.09); box-shadow: 0 32px 100px #a855f7ee, 0 12px 32px #fff4; z-index: 2; }
+        .recommended-scroll::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 8px; }
+        .separate-card { background: var(--color-card); border: 2.5px solid var(--color-primary); border-radius: 2.2rem; box-shadow: 0 16px 48px 0 var(--color-primary), 0 4px 16px rgba(255,255,255,0.3); margin: 1.5rem; transition: box-shadow 0.18s, transform 0.18s; min-width: 220px; max-width: 240px; }
+        .separate-card:hover { transform: translateY(-18px) scale(1.09); box-shadow: 0 32px 100px var(--color-primary), 0 12px 32px rgba(255,255,255,0.4); z-index: 2; }
       `}</style>
       <section className="relative h-[90vh] w-full overflow-hidden">
         <div className="absolute top-1/3 left-16 w-32 h-40 rounded-xl overflow-hidden opacity-70 blur-xl z-10 pointer-events-none">
@@ -127,19 +129,19 @@ export default function Home() {
             alt="Tech background" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-overlay"></div>
         </div>
         <div className="absolute inset-0 gradient-bg-animated"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-purple-900/40 to-black/60"></div>
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-4 h-4 bg-blush rounded-full animate-bounce-slow opacity-60"></div>
-          <div className="absolute top-40 right-32 w-6 h-6 bg-purple-500 rounded-full float opacity-40"></div>
-          <div className="absolute bottom-32 left-1/4 w-3 h-3 bg-pink-400 rounded-full animate-pulse-slow opacity-70"></div>
-          <div className="absolute top-1/2 right-1/4 w-5 h-5 bg-violet-400 rounded-full float opacity-50"></div>
+          <div className="absolute top-20 left-20 w-4 h-4 bg-secondary rounded-full animate-bounce-slow opacity-60"></div>
+          <div className="absolute top-40 right-32 w-6 h-6 bg-primary rounded-full float opacity-40"></div>
+          <div className="absolute bottom-32 left-1/4 w-3 h-3 bg-secondary rounded-full animate-pulse-slow opacity-70"></div>
+          <div className="absolute top-1/2 right-1/4 w-5 h-5 bg-primary rounded-full float opacity-50"></div>
         </div>
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
           <motion.h1 
-            className="text-7xl md:text-8xl font-extrabold tracking-wide text-white drop-shadow-lg gradient-text-animated"
+            className="text-7xl md:text-8xl font-extrabold tracking-wide text-text drop-shadow-lg gradient-text-animated"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
@@ -147,7 +149,7 @@ export default function Home() {
             The Velvet Cart
           </motion.h1>
           <motion.p 
-            className="text-2xl md:text-3xl mt-6 max-w-2xl text-white/90 glow-text"
+            className="text-2xl md:text-3xl mt-6 max-w-2xl text-text/90 glow-text"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
@@ -164,7 +166,7 @@ export default function Home() {
               <input
                 type="text"
                 placeholder="🔍 Search for products, brands, or categories..."
-                className="w-full px-8 py-4 bg-white/15 backdrop-blur-xl border border-white/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blush text-white placeholder-white/60 text-lg shadow-2xl glow-hover"
+                className="w-full px-8 py-4 bg-card/15 backdrop-blur-xl border border-card/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary text-text placeholder-text/60 text-lg shadow-2xl glow-hover focus-ring"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -172,24 +174,24 @@ export default function Home() {
                 ✨
               </div>
               {searchTerm && liveResults.length > 0 && (
-                <div className="absolute left-0 right-0 mt-2 bg-night/95 rounded-2xl shadow-2xl border border-white/10 z-50 max-h-96 overflow-y-auto">
+                <div className="absolute left-0 right-0 mt-2 bg-card/95 rounded-2xl shadow-2xl border border-card/10 z-50 max-h-96 overflow-y-auto">
                   {liveResults.map(product => (
                     <div
                       key={product.id}
-                      className="flex items-center gap-4 px-4 py-3 hover:bg-white/10 cursor-pointer transition"
+                      className="flex items-center gap-4 px-4 py-3 hover:bg-card/10 cursor-pointer transition"
                       onClick={() => navigate(`/product/${product.id}`)}
                     >
                       <img src={product.images[0]} alt={product.name} className="w-12 h-12 object-cover rounded-xl" />
                       <div className="flex-1">
-                        <div className="font-semibold text-white">{product.name}</div>
-                        <div className="text-sm text-white/70">₹{product.price.toLocaleString()}</div>
+                        <div className="font-semibold text-text">{product.name}</div>
+                        <div className="text-sm text-muted">₹{product.price.toLocaleString()}</div>
                       </div>
                     </div>
                   ))}
                 </div>
               )}
               {searchTerm && liveResults.length === 0 && (
-                <div className="absolute left-0 right-0 mt-2 bg-night/95 rounded-2xl shadow-2xl border border-white/10 z-50 px-4 py-3 text-white/70 text-center">
+                <div className="absolute left-0 right-0 mt-2 bg-card/95 rounded-2xl shadow-2xl border border-card/10 z-50 px-4 py-3 text-muted text-center">
                   No products found.
                 </div>
               )}
@@ -217,8 +219,9 @@ export default function Home() {
           </select>
         </div>
       </div>
-      <div className="flex w-full max-w-7xl mx-auto gap-8 mt-10 items-start">
-        <aside className="sidebar-glass p-6 h-fit flex flex-col justify-start">
+      <div className="relative z-30 flex w-full max-w-7xl mx-auto mt-10 gap-0 md:gap-8 items-start">
+        <div className="absolute left-0 top-0 bottom-0 w-72 bg-white/10 border-r border-white/20 rounded-none md:rounded-3xl shadow-lg -z-10" style={{ minHeight: '100%' }} />
+        <aside className="w-72 min-w-[260px] p-6 flex flex-col h-full relative z-10">
           <div className="mb-8">
             <h3 className="text-lg font-bold mb-4 gradient-text">Categories</h3>
             <ul className="space-y-2">
@@ -280,7 +283,7 @@ export default function Home() {
             </div>
           </div>
         </aside>
-        <main className="flex-1">
+        <main className="flex-1 pl-0 md:pl-8">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -305,34 +308,38 @@ export default function Home() {
               <div className="col-span-full text-center text-xl text-white/70 py-20">No products found.</div>
             )}
           </motion.div>
-          
-          <div className="mt-10">
-            <div className="flex items-center gap-3 mb-4">
-              <h2 className="text-xl font-bold gradient-text">Recommended for You</h2>
-              <div className="text-xl">✨</div>
-            </div>
-            <div className="recommended-scroll">
-              {user && getRecommendations(productsData, 4).map((product, index) => (
-                <motion.div
-                  key={product.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.025, y: -3 }}
-                  className=""
-                  style={{ minWidth: 280, maxWidth: 280 }}
-                >
-                  <ProductCard product={product} viewMode="grid" />
-                </motion.div>
-              ))}
-            </div>
-          </div>
         </main>
+      </div>
+
+      <div className="mt-10 w-full max-w-7xl mx-auto">
+        <div className="flex items-center gap-3 mb-4">
+          <h2 className="text-xl font-bold gradient-text">Recommended for You</h2>
+          <div className="text-xl">✨</div>
+        </div>
+        <div className="recommended-scroll">
+          {user && getRecommendations(productsData, 4).map((product, index) => (
+            <motion.div
+              key={product.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.025, y: -3 }}
+              className=""
+              style={{ minWidth: 280, maxWidth: 280 }}
+            >
+              <ProductCard product={product} viewMode="grid" />
+            </motion.div>
+          ))}
+        </div>
       </div>
 
       <div className="w-full bg-yellow-400 text-white text-center py-3 font-semibold text-lg mb-8">
         Monsoon Sale: Get up to 40% off on select products! Free shipping on orders over ₹999!
       </div>
+
+      <RecentlyViewed />
+
+      <ProductComparison />
 
       <FeaturedProductsCarousel />
 

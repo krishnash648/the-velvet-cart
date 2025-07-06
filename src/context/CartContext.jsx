@@ -1,12 +1,11 @@
 import { createContext, useContext, useState } from 'react';
-import { toast } from 'react-hot-toast'; // 🥐 Toasts!
+import { toast } from 'react-hot-toast';
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  // ➕ Add to Cart
   const addToCart = (product) => {
     const exists = cart.find((item) => item.id === product.id);
     if (exists) {
@@ -24,13 +23,11 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  // ❌ Remove from Cart
   const removeFromCart = (id) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
     toast.error('Item removed from cart');
   };
 
-  // 🔁 Update Quantity
   const updateQuantity = (id, quantity) => {
     setCart((prev) =>
       prev.map((item) =>
@@ -41,10 +38,9 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  // 🧼 Clear Cart
   const clearCart = () => {
     setCart([]);
-    toast.success('Cart cleared!'); // Optional
+    toast.success('Cart cleared!');
   };
 
   return (
@@ -54,7 +50,7 @@ export const CartProvider = ({ children }) => {
         addToCart,
         removeFromCart,
         updateQuantity,
-        clearCart, // 🚨 Add it here
+        clearCart,
       }}
     >
       {children}
@@ -62,5 +58,4 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-// 🔥 Custom hook
 export const useCart = () => useContext(CartContext);

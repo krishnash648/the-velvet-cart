@@ -23,6 +23,7 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [role, setRole] = useState('user');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [wishlist, setWishlist] = useState([]);
@@ -32,6 +33,20 @@ export const AuthProvider = ({ children }) => {
       setWishlist([]);
       return;
     }
+    const fetchRole = async () => {
+      try {
+        const ref = doc(db, 'users', user.uid);
+        const snap = await getDoc(ref);
+        if (snap.exists()) {
+          setRole(snap.data().role || 'user');
+        } else {
+          setRole('user');
+        }
+      } catch {
+        setRole('user');
+      }
+    };
+    fetchRole();
     const fetchWishlist = async () => {
       try {
         const ref = doc(db, 'wishlists', user.uid);
@@ -52,11 +67,28 @@ export const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
       setUser(firebaseUser);
       setLoading(false);
+      if (firebaseUser) {
+        (async () => {
+          try {
+            const ref = doc(db, 'users', firebaseUser.uid);
+            const snap = await getDoc(ref);
+            if (snap.exists()) {
+              setRole(snap.data().role || 'user');
+            } else {
+              setRole('user');
+            }
+          } catch {
+            setRole('user');
+          }
+        })();
+      } else {
+        setRole('user');
+      }
     });
     return () => unsubscribe();
   }, []);
 
-  const register = async ({ email, password, firstName, lastName }) => {
+  const register = async ({ email, password, firstName, lastName, role = 'user' }) => {
     setLoading(true);
     setError(null);
     try {
@@ -64,7 +96,14 @@ export const AuthProvider = ({ children }) => {
       await updateProfile(res.user, {
         displayName: `${firstName} ${lastName}`
       });
+      await setDoc(doc(db, 'users', res.user.uid), {
+        firstName,
+        lastName,
+        email,
+        role
+      }, { merge: true });
       setUser({ ...res.user, displayName: `${firstName} ${lastName}` });
+      setRole(role);
       toast.success('Account created!');
       return { success: true };
     } catch (err) {
@@ -200,7 +239,8 @@ export const AuthProvider = ({ children }) => {
         addToWishlist,
         removeFromWishlist,
         isInWishlist,
-        getRecommendations
+        getRecommendations,
+        role
       }}
     >
       {children}

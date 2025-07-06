@@ -10,11 +10,44 @@ body {
   width: 100vw;
   overflow-x: hidden;
   position: relative;
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: background 0.3s, color 0.3s;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-bg: #f8f8fa;
+  --color-text: #181028;
+  --color-primary: #a855f7;
+  --color-secondary: #f472b6;
+  --color-card: #fff;
+  --color-border: #e5e7eb;
+  --color-navbar: rgba(26, 16, 36, 0.8);
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-text-muted: #6b7280;
+  --color-success: #10b981;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+}
+
+[data-theme='dark'] {
+  --color-bg: #181028;
+  --color-text: #f8f8fa;
+  --color-primary: #a855f7;
+  --color-secondary: #f472b6;
+  --color-card: #23173a;
+  --color-border: #312244;
+  --color-navbar: rgba(26, 16, 36, 0.9);
+  --color-overlay: rgba(0, 0, 0, 0.7);
+  --color-text-muted: #9ca3af;
+  --color-success: #10b981;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+}
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
@@ -22,19 +55,18 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: var(--color-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #E94FE1, #8B5CF6);
+  background: var(--color-primary);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #d946ef, #a855f7);
+  background: var(--color-secondary);
 }
 
-/* Sexy gradient backgrounds */
 .gradient-bg {
   background: linear-gradient(135deg, #0B0617 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
 }
@@ -53,7 +85,7 @@ body {
 
 /* Glowing effects */
 .glow {
-  box-shadow: 0 0 20px rgba(233, 79, 225, 0.3);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
 }
 
 .glow-hover:hover {
@@ -275,7 +307,7 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #E94FE1, #8B5CF6, #A855F7);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -364,6 +396,9 @@ body {
 /* Card styles */
 .card {
   @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  transition: background 0.3s, border 0.3s;
 }
 
 /* Input styles */
@@ -408,4 +443,90 @@ body {
 /* Sexy checkout */
 .checkout-sexy {
   @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl;
+}
+
+.bg-primary {
+  background: var(--color-primary);
+}
+.bg-secondary {
+  background: var(--color-secondary);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}
+.bg-card {
+  background: var(--color-card);
+}
+.border-card {
+  border-color: var(--color-border);
+}
+.text-muted {
+  color: var(--color-text-muted);
+}
+.bg-navbar {
+  background: var(--color-navbar);
+}
+.bg-overlay {
+  background: var(--color-overlay);
+}
+
+.theme-transition {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+/* Focus styles for accessibility */
+.focus-ring:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.navbar-link {
+  position: relative;
+  transition: color 0.2s, opacity 0.2s;
+}
+
+.navbar-link:after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -4px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  opacity: 0;
+  transform: scaleX(0);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.navbar-link:hover:after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.navbar-link.active {
+  color: var(--color-primary);
+}
+
+.navbar-link.active:after {
+  opacity: 1;
+  transform: scaleX(1);
 }
