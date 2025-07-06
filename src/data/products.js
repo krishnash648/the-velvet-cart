@@ -83,7 +83,7 @@ const products = [
       'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
 
     ],
-    image: 'https://archertechlab.com/cdn/shop/products/400-3_1200x1200_crop_center.png?v=1750658032',
+    image: 'https://archertechlab.com/cdn/shop/products/400-3_1200x1200_crop_center.png?v=1750658032' + new Date().getTime(),
     isNew: true,
     isOnSale: true,
     discount: 25
