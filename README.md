@@ -27,7 +27,7 @@ Welcome to **The Velvet Cart**, a modern React E-commerce Experience for seamles
 
 ## 🌟 Live Demo
 
-👉 [**See The Velvet Cart in action**](https://krishnash648.github.io/the-velvet-cart)
+👉 [**See The Velvet Cart in action**](https://krishnash648.github.io/the-velvet-cart/)
 
 ---
 
