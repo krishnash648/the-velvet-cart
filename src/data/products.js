@@ -12,9 +12,9 @@ const products = [
     description: 'Premium wireless headphones with active noise cancellation, 30-hour battery life, and crystal-clear sound quality.',
     features: ['Active Noise Cancellation', '30-hour Battery Life', 'Bluetooth 5.0', 'Touch Controls'],
     images: [
-      'https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80'
+      'https://assets.bosecreative.com/transform/775c3e9a-fcd1-489f-a2f7-a57ac66464e1/SF_QCUH_deepplum_gallery_1_816x612_x2?quality=90&io=width:400,height:300,transform:fit&io=width:400,height:300,transform:fit',
+      'https://th.bing.com/th/id/OIP.48HU2jZl8bVwdO2sRd70tgHaLE?w=127&h=190&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3',
+      'https://th.bing.com/th/id/OIP.KByw2xbPIij4qBGDFwCb4AHaHU?w=180&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'
     ],
     image: 'https://assets.bosecreative.com/transform/775c3e9a-fcd1-489f-a2f7-a57ac66464e1/SF_QCUH_deepplum_gallery_1_816x612_x2?quality=90&io=width:400,height:300,transform:fit&io=width:400,height:300,transform:fit',
     isNew: true,
@@ -79,8 +79,8 @@ const products = [
     features: ['RGB Lighting', 'Programmable Buttons', 'High DPI Sensor', 'Ergonomic Design'],
     images: [
       'https://archertechlab.com/cdn/shop/products/400-3_1200x1200_crop_center.png?v=1750658032',
-      'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1511452885600-a2f0b4a5b0c2?auto=format&fit=crop&w=400&q=80'
+      'https://th.bing.com/th/id/OIP.xqCqw-VCxJGHBTBsn0rqoAHaHa?w=182&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+      'https://th.bing.com/th/id/OIP.ISOH56C926uEmeSrjyaqKgHaHa?w=171&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'
     ],
     image: 'https://archertechlab.com/cdn/shop/products/400-3_1200x1200_crop_center.png?v=1750658032',
     isNew: true,
