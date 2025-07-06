@@ -1,13 +1,43 @@
 {
   "files": {
-    "main.css": "/the-velvet-cart/static/css/main.6426bcfe.css",
-    "main.js": "/the-velvet-cart/static/js/main.fa715e1c.js",
+    "main.css": "/the-velvet-cart/static/css/main.8075b820.css",
+    "main.js": "/the-velvet-cart/static/js/main.a2aabc82.js",
+    "static/js/651.0bc9f303.chunk.js": "/the-velvet-cart/static/js/651.0bc9f303.chunk.js",
+    "static/js/989.52d42c4f.chunk.js": "/the-velvet-cart/static/js/989.52d42c4f.chunk.js",
+    "static/js/405.3ed56c26.chunk.js": "/the-velvet-cart/static/js/405.3ed56c26.chunk.js",
+    "static/js/638.3cb6fd04.chunk.js": "/the-velvet-cart/static/js/638.3cb6fd04.chunk.js",
+    "static/js/485.04be340f.chunk.js": "/the-velvet-cart/static/js/485.04be340f.chunk.js",
+    "static/js/495.29908f55.chunk.js": "/the-velvet-cart/static/js/495.29908f55.chunk.js",
+    "static/js/653.169f9d9b.chunk.js": "/the-velvet-cart/static/js/653.169f9d9b.chunk.js",
+    "static/js/402.ac861680.chunk.js": "/the-velvet-cart/static/js/402.ac861680.chunk.js",
+    "static/js/347.964cffac.chunk.js": "/the-velvet-cart/static/js/347.964cffac.chunk.js",
+    "static/js/688.af7b3fb9.chunk.js": "/the-velvet-cart/static/js/688.af7b3fb9.chunk.js",
+    "static/js/650.e9e98b7b.chunk.js": "/the-velvet-cart/static/js/650.e9e98b7b.chunk.js",
+    "static/js/596.aecb65c9.chunk.js": "/the-velvet-cart/static/js/596.aecb65c9.chunk.js",
+    "static/js/674.5d478134.chunk.js": "/the-velvet-cart/static/js/674.5d478134.chunk.js",
+    "static/js/58.880e980d.chunk.js": "/the-velvet-cart/static/js/58.880e980d.chunk.js",
+    "static/js/43.17a1ca15.chunk.js": "/the-velvet-cart/static/js/43.17a1ca15.chunk.js",
     "index.html": "/the-velvet-cart/index.html",
-    "main.6426bcfe.css.map": "/the-velvet-cart/static/css/main.6426bcfe.css.map",
-    "main.fa715e1c.js.map": "/the-velvet-cart/static/js/main.fa715e1c.js.map"
+    "main.8075b820.css.map": "/the-velvet-cart/static/css/main.8075b820.css.map",
+    "main.a2aabc82.js.map": "/the-velvet-cart/static/js/main.a2aabc82.js.map",
+    "651.0bc9f303.chunk.js.map": "/the-velvet-cart/static/js/651.0bc9f303.chunk.js.map",
+    "989.52d42c4f.chunk.js.map": "/the-velvet-cart/static/js/989.52d42c4f.chunk.js.map",
+    "405.3ed56c26.chunk.js.map": "/the-velvet-cart/static/js/405.3ed56c26.chunk.js.map",
+    "638.3cb6fd04.chunk.js.map": "/the-velvet-cart/static/js/638.3cb6fd04.chunk.js.map",
+    "485.04be340f.chunk.js.map": "/the-velvet-cart/static/js/485.04be340f.chunk.js.map",
+    "495.29908f55.chunk.js.map": "/the-velvet-cart/static/js/495.29908f55.chunk.js.map",
+    "653.169f9d9b.chunk.js.map": "/the-velvet-cart/static/js/653.169f9d9b.chunk.js.map",
+    "402.ac861680.chunk.js.map": "/the-velvet-cart/static/js/402.ac861680.chunk.js.map",
+    "347.964cffac.chunk.js.map": "/the-velvet-cart/static/js/347.964cffac.chunk.js.map",
+    "688.af7b3fb9.chunk.js.map": "/the-velvet-cart/static/js/688.af7b3fb9.chunk.js.map",
+    "650.e9e98b7b.chunk.js.map": "/the-velvet-cart/static/js/650.e9e98b7b.chunk.js.map",
+    "596.aecb65c9.chunk.js.map": "/the-velvet-cart/static/js/596.aecb65c9.chunk.js.map",
+    "674.5d478134.chunk.js.map": "/the-velvet-cart/static/js/674.5d478134.chunk.js.map",
+    "58.880e980d.chunk.js.map": "/the-velvet-cart/static/js/58.880e980d.chunk.js.map",
+    "43.17a1ca15.chunk.js.map": "/the-velvet-cart/static/js/43.17a1ca15.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6426bcfe.css",
-    "static/js/main.fa715e1c.js"
+    "static/css/main.8075b820.css",
+    "static/js/main.a2aabc82.js"
   ]
 }
