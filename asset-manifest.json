@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/the-velvet-cart/static/css/main.ed59f178.css",
-    "main.js": "/the-velvet-cart/static/js/main.1844aeba.js",
+    "main.css": "/the-velvet-cart/static/css/main.6426bcfe.css",
+    "main.js": "/the-velvet-cart/static/js/main.fa715e1c.js",
     "index.html": "/the-velvet-cart/index.html",
-    "main.ed59f178.css.map": "/the-velvet-cart/static/css/main.ed59f178.css.map",
-    "main.1844aeba.js.map": "/the-velvet-cart/static/js/main.1844aeba.js.map"
+    "main.6426bcfe.css.map": "/the-velvet-cart/static/css/main.6426bcfe.css.map",
+    "main.fa715e1c.js.map": "/the-velvet-cart/static/js/main.fa715e1c.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed59f178.css",
-    "static/js/main.1844aeba.js"
+    "static/css/main.6426bcfe.css",
+    "static/js/main.fa715e1c.js"
   ]
 }
