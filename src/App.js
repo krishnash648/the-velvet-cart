@@ -37,10 +37,10 @@ function App() {
     <AuthProvider>
       <CartProvider>
         <Router basename={process.env.PUBLIC_URL}>
-          <Toaster position="top-right" reverseOrder={false} />
-          <Navbar />
-          <AnimatedRoutes />
-        </Router>
+      <Toaster position="top-right" reverseOrder={false} />
+      <Navbar />
+      <AnimatedRoutes />
+    </Router>
       </CartProvider>
     </AuthProvider>
   );

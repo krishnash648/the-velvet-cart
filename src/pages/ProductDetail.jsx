@@ -240,7 +240,7 @@ export default function ProductDetail() {
                       ? 'bg-gray-600 text-gray-400 cursor-not-allowed' 
                       : 'bg-velvet hover:bg-purple-700 text-white hover:scale-105'
                   }`}
-                >
+      >
                   {product.stock === 0 ? 'Out of Stock' : 'Add to Cart'}
       </button>
               </div>

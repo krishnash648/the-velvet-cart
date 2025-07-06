@@ -34,9 +34,9 @@ const products = [
     description: 'Advanced fitness tracking with heart rate monitoring, GPS, and water resistance up to 50m.',
     features: ['Heart Rate Monitor', 'GPS Tracking', 'Water Resistant', 'Sleep Tracking'],
     images: [
-      'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80'
+      'https://cdn.mos.cms.futurecdn.net/Pk5ydxYo6ty2Q4SX9vznP6.jpg',
+      'https://th.bing.com/th/id/OIP.R6FupRfwXfROVUWKw6AttwHaHa?w=165&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+      'https://th.bing.com/th/id/OIP.mX7QHcAE0a1780PFLvqUgQHaHa?w=185&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7'
     ],
     image: 'https://cdn.mos.cms.futurecdn.net/Pk5ydxYo6ty2Q4SX9vznP6.jpg',
     isNew: false,
@@ -57,8 +57,8 @@ const products = [
     features: ['360° Sound', 'Waterproof', '12-hour Battery', 'Party Mode'],
     images: [
       'https://storio.in/cdn/shop/files/71kl33XC3pL.jpg?v=1736418030',
-      'https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80'
+      'https://th.bing.com/th/id/OIP.SHZGf1Yr9LEoogHfxSlvawHaG_?w=223&h=210&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3',
+      'https://th.bing.com/th/id/OIP.fqNrBBC9NyjOaZmIjEI5FgHaHa?w=208&h=209&c=7&r=0&o=5&dpr=1.3&pid=1.7'
     ],
     image: 'https://storio.in/cdn/shop/files/71kl33XC3pL.jpg?v=1736418030',
     isNew: false,
@@ -78,11 +78,11 @@ const products = [
     description: 'High-precision gaming mouse with customizable RGB lighting and programmable buttons.',
     features: ['RGB Lighting', 'Programmable Buttons', 'High DPI Sensor', 'Ergonomic Design'],
     images: [
-      'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80',
+      'https://archertechlab.com/cdn/shop/products/400-3_1200x1200_crop_center.png?v=1750658032',
       'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
       'https://images.unsplash.com/photo-1511452885600-a2f0b4a5b0c2?auto=format&fit=crop&w=400&q=80'
     ],
-    image: 'https://m.media-amazon.com/images/I/61pDShoLXqL.jpg',
+    image: 'https://archertechlab.com/cdn/shop/products/400-3_1200x1200_crop_center.png?v=1750658032',
     isNew: true,
     isOnSale: true,
     discount: 25
@@ -100,9 +100,9 @@ const products = [
     description: '55-inch 4K Ultra HD Smart TV with HDR, built-in streaming apps, and voice control.',
     features: ['4K Ultra HD', 'HDR Technology', 'Smart TV', 'Voice Control'],
     images: [
-      'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80'
+      'https://aws-obg-image-lb-3.tcl.com/content/dam/iffalcon/product/tv/s-series/s53/id-image/2.png',
+      'https://th.bing.com/th/id/OIP.xzyKY821CGOco9-KyPqkUQAAAA?w=157&h=159&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+      'https://th.bing.com/th/id/OIP.SNDLmhQGCKOCqqklnjErNAHaIJ?w=169&h=186&c=7&r=0&o=5&dpr=1.3&pid=1.7'
     ],
     image: 'https://aws-obg-image-lb-3.tcl.com/content/dam/iffalcon/product/tv/s-series/s53/id-image/2.png',
     isNew: false,
@@ -122,9 +122,9 @@ const products = [
     description: 'Premium mechanical keyboard with Cherry MX switches, RGB backlighting, and wireless connectivity.',
     features: ['Cherry MX Switches', 'RGB Backlighting', 'Wireless', 'Aluminum Frame'],
     images: [
-      'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1511452885600-a2f0b4a5b0c2?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80'
+      'https://pinkgaming.shop/cdn/shop/files/pink-cute-cat-design-wireless-mechanical-keyboard_2048x.jpg?v=1724946951',
+      'https://th.bing.com/th/id/OIP.UuX53Mn_JxaAWW5TlJSh-wHaFj?w=269&h=202&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+      'https://th.bing.com/th/id/OIP.LrsLEI8Lj4b4wOwQdgpT0gHaHa?w=185&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7'
     ],
     image: 'https://pinkgaming.shop/cdn/shop/files/pink-cute-cat-design-wireless-mechanical-keyboard_2048x.jpg?v=1724946951',
     isNew: true,
@@ -144,9 +144,9 @@ const products = [
     description: '4K action camera with image stabilization, waterproof case, and 360-degree capture.',
     features: ['4K Recording', 'Image Stabilization', 'Waterproof', '360° Capture'],
     images: [
-      'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80'
+      'https://cameraclub.in/cdn/shop/files/Untitleddesign_5_95ac4bcc-c06f-44fd-b8de-d456a1ee0a39.png?v=1713357560',
+      'https://th.bing.com/th/id/OIP.8BS0GZaxiwphsvCaV_nobgHaEK?w=311&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+      'https://ts3.mm.bing.net/th?id=OIP.byD8ysx7Qy-pZeY8tSo5pQHaE8&pid=15.1'
     ],
     image: 'https://cameraclub.in/cdn/shop/files/Untitleddesign_5_95ac4bcc-c06f-44fd-b8de-d456a1ee0a39.png?v=1713357560',
     isNew: false,
@@ -166,9 +166,9 @@ const products = [
     description: 'True wireless earbuds with active noise cancellation and spatial audio technology.',
     features: ['Active Noise Cancellation', 'Spatial Audio', 'Wireless Charging', 'Sweat Resistant'],
     images: [
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1512446733611-9099a758e63c?auto=format&fit=crop&w=400&q=80'
+      'https://www.zdnet.com/a/img/resize/f00be25dc9dbc38bb2d31641e69e33139d9ab53a/2024/02/14/07e7dfb9-8c65-4d03-a629-b9fc36f42bfd/dsc01521-2.jpg?auto=webp&fit=crop&height=675&width=1200',
+      'https://th.bing.com/th/id/OIP.d0uy98hu_2fYWLP2DHKb4wHaHa?w=185&h=186&c=7&r=0&o=5&dpr=1.3&pid=1.70',
+      'https://th.bing.com/th/id/OIP.i_0MyUcCXVZpY78Gw8PDwgHaHa?w=186&h=186&c=7&r=0&o=5&dpr=1.3&pid=1.7'
     ],
     image: 'https://www.zdnet.com/a/img/resize/f00be25dc9dbc38bb2d31641e69e33139d9ab53a/2024/02/14/07e7dfb9-8c65-4d03-a629-b9fc36f42bfd/dsc01521-2.jpg?auto=webp&fit=crop&height=675&width=1200',
     isNew: false,
@@ -188,7 +188,8 @@ const products = [
     description: '10.1-inch Android tablet with HD display, long battery life, and fast performance for work and play.',
     features: ['10.1" HD Display', 'Octa-core Processor', 'Long Battery', 'Expandable Storage'],
     images: [
-      'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80'
+      'https://www.digitaltrends.com/wp-content/uploads/2024/06/lenovo-tab-plus-2024-official-1.jpg?fit=720%2C479&p=1',
+      'https://th.bing.com/th/id/OIP.RTerm_ulfOfeEW387NAYfgHaE8?w=284&h=189&c=7&r=0&o=5&dpr=1.3&pid=1.7',
     ],
     image: 'https://www.digitaltrends.com/wp-content/uploads/2024/06/lenovo-tab-plus-2024-official-1.jpg?fit=720%2C479&p=1',
     isNew: true,
@@ -208,7 +209,8 @@ const products = [
     description: 'Surround sound gaming headset with noise-cancelling mic and RGB lighting.',
     features: ['Surround Sound', 'Noise Cancelling Mic', 'RGB Lighting', 'Comfort Fit'],
     images: [
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80'
+      'https://www.eksa.net/cdn/shop/files/E900ProYellow_5104bed1-2393-4a32-93b0-c02bb12c0f20.png?v=1706768415&width=720',
+      'https://th.bing.com/th/id/OIP.nnWQ9M4LY7cHJPkKYbIJ8gHaHa?w=188&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7'
     ],
     image: 'https://www.eksa.net/cdn/shop/files/E900ProYellow_5104bed1-2393-4a32-93b0-c02bb12c0f20.png?v=1706768415&width=720',
     isNew: true,
@@ -228,7 +230,8 @@ const products = [
     description: '24MP DSLR camera with fast autofocus, Wi-Fi, and full HD video recording.',
     features: ['24MP Sensor', 'Wi-Fi', 'Full HD Video', 'Fast Autofocus'],
     images: [
-      'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80'
+      'https://i.reincubate.com/i/mirrorless-dslr-cover.png',
+      'https://th.bing.com/th/id/OIP.vKrQDUvxb9lLxFZl3a0Y6QHaHa?w=195&h=195&c=7&r=0&o=5&dpr=1.3&pid=1.7'
     ],
     image: 'https://i.reincubate.com/i/mirrorless-dslr-cover.png',
     isNew: false,
@@ -248,7 +251,8 @@ const products = [
     description: 'High-capacity 20000mAh power bank with fast charging and dual USB output.',
     features: ['20000mAh', 'Fast Charging', 'Dual USB', 'Slim Design'],
     images: [
-      'https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=400&q=80'
+      'https://www.mytrendyphone.eu/images/Cyke-P1-Plus-Wireless-Power-Bank-20000mAh-Green-15092020-01-p.webp',
+      'https://th.bing.com/th/id/OIP.Ftk21Win7RXvMdxPyDufswHaHa?w=193&h=193&c=7&r=0&o=5&dpr=1.3&pid=1.7'
     ],
     image: 'https://www.mytrendyphone.eu/images/Cyke-P1-Plus-Wireless-Power-Bank-20000mAh-Green-15092020-01-p.webp',
     isNew: false,
@@ -268,7 +272,8 @@ const products = [
     description: 'Voice-controlled smart speaker with Google Assistant and multi-room audio.',
     features: ['Voice Control', 'Google Assistant', 'Multi-room Audio', 'Wi-Fi'],
     images: [
-      'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80'
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGCCWx0g1gSB1F1U47Aoy0N4c8gZ1e2imLdA&s',
+      'https://ts2.mm.bing.net/th?id=OIP.JqL6k04oLoN060V0XG-A9QHaGL&pid=15.1'
     ],
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGCCWx0g1gSB1F1U47Aoy0N4c8gZ1e2imLdA&s',
     isNew: true,

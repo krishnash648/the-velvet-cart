@@ -298,7 +298,7 @@ export default function Home() {
                   style={{ minWidth: 280, maxWidth: 280 }}
                 >
                   <ProductCard product={product} viewMode="grid" />
-                </motion.div>
+        </motion.div>
               ))}
             </div>
           </div>

@@ -117,9 +117,9 @@ export default function ProductCard({ product, viewMode = 'grid' }) {
       className="bg-white/10 backdrop-blur-xl rounded-xl shadow border border-white/10 transition-all duration-300 flex flex-col overflow-hidden min-h-[300px] max-w-sm w-72"
     >
       <div className="relative w-full flex justify-center items-center p-4" style={{ aspectRatio: '4/5', minHeight: '240px', maxHeight: '320px' }}>
-        <img
-          src={product.image}
-          alt={product.name}
+      <img
+        src={product.image}
+        alt={product.name}
           className="w-full h-full object-contain object-center rounded-xl border border-white/20 p-2"
           style={{ aspectRatio: '4/5', minHeight: '240px', maxHeight: '320px' }}
         />
@@ -163,13 +163,13 @@ export default function ProductCard({ product, viewMode = 'grid' }) {
           >
             {isInWishlist && isInWishlist(product.id) ? '❤️' : '🤍'}
           </motion.button>
-          <Link
-            to={`/product/${product.id}`}
+      <Link
+        to={`/product/${product.id}`}
             className="px-2 py-1 rounded-full bg-gradient-to-r from-blush to-purple-600 text-white text-[10px] font-semibold shadow hover:scale-105 transition"
-          >
-            View
-          </Link>
-        </div>
+      >
+        View
+      </Link>
+    </div>
       </div>
     </motion.div>
   );
