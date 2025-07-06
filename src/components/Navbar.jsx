@@ -93,9 +93,7 @@ const Navbar = () => {
             </form>
           </div>
 
-          {/* Right Side Actions */}
           <div className="flex items-center gap-4">
-            {/* Mobile Search Toggle */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className="md:hidden text-gray-300 hover:text-white transition-colors p-2 rounded-lg hover:bg-white/10"
@@ -125,7 +123,6 @@ const Navbar = () => {
                 </AnimatePresence>
               </motion.div>
               
-              {/* Cart Tooltip */}
               <div className="absolute right-0 top-full mt-2 w-64 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto shadow-2xl">
                 <div className="text-sm text-gray-300 mb-2">
                   {totalItems} item{totalItems !== 1 ? 's' : ''} in cart
@@ -139,7 +136,6 @@ const Navbar = () => {
               </div>
             </Link>
 
-            {/* User Menu or Auth Icon */}
             {user ? (
               <div className="relative group">
                 <motion.button 
@@ -152,7 +148,7 @@ const Navbar = () => {
                   </div>
                   <span className="hidden md:block text-sm text-gray-300">{user.firstName}</span>
                 </motion.button>
-                {/* User Dropdown */}
+                {/* Dropdown */}
                 <div className="absolute right-0 top-full mt-2 w-48 bg-white/10 backdrop-blur-xl rounded-xl border border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto shadow-2xl">
                   <div className="p-2">
                     <Link to="/profile" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200">

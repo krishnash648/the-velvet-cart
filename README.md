@@ -65,18 +65,6 @@ npm start
 npm run build
 ```
 
----
-
-## 📁 Project Structure
-
-```
-src/
-├── components/         # Navbar, ProductCard, etc.
-├── context/            # CartContext, etc.
-├── data/               # products.js
-├── pages/              # Home, ProductDetail, Cart, Checkout
-└── App.js              # Main app
-```
 
 ---
 

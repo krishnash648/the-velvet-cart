@@ -102,22 +102,21 @@ export default function ProductDetail() {
             animate={{ opacity: 1, x: 0 }}
             className="space-y-6"
           >
-            {/* --- Premium Info Panel --- */}
             <div className="space-y-4 mb-6">
-              {/* Brand Logo & Name */}
+     
               <div className="flex items-center gap-3">
-                {/* Placeholder for brand logo */}
+
                 <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-2xl font-bold text-white shadow-md">
                   {product.brand.charAt(0)}
                 </div>
                 <span className="text-lg font-bold text-white tracking-wide">{product.brand} <span className="ml-2 text-xs bg-gradient-to-r from-purple-600 to-pink-600 text-white px-2 py-1 rounded-full font-semibold">Official Store</span></span>
               </div>
-              {/* Star Rating & Reviews */}
+
               <div className="flex items-center gap-2">
                 <span className="text-yellow-400 text-xl">{renderStars(product.rating)}</span>
                 <span className="text-gray-400 font-medium">{product.rating} ({product.reviews} reviews)</span>
               </div>
-              {/* Quick Highlights Row */}
+
               <div className="flex flex-wrap gap-3">
                 <div className="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-xl shadow-sm">
                   <span className="text-lg">🚚</span>
@@ -132,7 +131,7 @@ export default function ProductDetail() {
                   <span className="text-xs font-semibold text-white">1-Year Warranty</span>
                 </div>
               </div>
-              {/* Trust Badges */}
+             
               <div className="flex gap-3 mt-2">
                 <div className="flex items-center gap-2 bg-green-600/20 px-3 py-1 rounded-xl text-green-300 text-xs font-semibold">
                   <span>🔒</span> Secure Payment
@@ -141,7 +140,7 @@ export default function ProductDetail() {
                   <span>✅</span> Genuine Products
                 </div>
               </div>
-              {/* Social Share & Wishlist */}
+
               <div className="flex items-center gap-4 mt-2">
                 <button className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-xl text-green-400" title="Share on WhatsApp">
                   <span>🟢</span>
@@ -157,12 +156,12 @@ export default function ProductDetail() {
                 </button>
               </div>
             </div>
-            {/* --- End Premium Info Panel --- */}
+
             <div>
               <h1 className="text-4xl font-bold mb-2">{product.name}</h1>
               <p className="text-gray-400 text-lg mb-4">{product.brand}</p>
               
-              {/* Price */}
+
               <div className="space-y-2">
                 <div className="flex items-center gap-3">
                   <span className="text-3xl font-bold text-blush">₹{product.price.toLocaleString()}</span>
@@ -177,7 +176,7 @@ export default function ProductDetail() {
                 </div>
               </div>
 
-              {/* Stock Status */}
+             
               <div className="space-y-2">
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
                   product.stock > 10 ? 'bg-green-100 text-green-800' : 
@@ -189,13 +188,13 @@ export default function ProductDetail() {
                 </span>
               </div>
 
-              {/* Description */}
+           
               <div>
                 <h3 className="text-lg font-semibold mb-2">Description</h3>
                 <p className="text-gray-300 leading-relaxed">{product.description}</p>
               </div>
 
-              {/* Features */}
+            
               <div>
                 <h3 className="text-lg font-semibold mb-3">Key Features</h3>
                 <ul className="space-y-2">
@@ -208,7 +207,7 @@ export default function ProductDetail() {
                 </ul>
               </div>
 
-              {/* Add to Cart */}
+              
               <div className="space-y-4 pt-6 border-t border-gray-700">
                 <div className="flex items-center gap-4">
                   <label className="text-sm font-medium">Quantity:</label>
@@ -248,7 +247,7 @@ export default function ProductDetail() {
           </motion.div>
         </div>
 
-        {/* Reviews Section */}
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

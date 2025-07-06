@@ -189,7 +189,7 @@ const products = [
     features: ['10.1" HD Display', 'Octa-core Processor', 'Long Battery', 'Expandable Storage'],
     images: [
       'https://www.digitaltrends.com/wp-content/uploads/2024/06/lenovo-tab-plus-2024-official-1.jpg?fit=720%2C479&p=1',
-      'https://th.bing.com/th/id/OIP.RTerm_ulfOfeEW387NAYfgHaE8?w=284&h=189&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+      'https://th.bing.com/th/id/OIP.RTerm_ulfOfeEW387NAYfgHaE8?w=284&h=189&c=7&r=0&o=5&dpr=1.3&pid=1.7'
     ],
     image: 'https://www.digitaltrends.com/wp-content/uploads/2024/06/lenovo-tab-plus-2024-official-1.jpg?fit=720%2C479&p=1',
     isNew: true,
