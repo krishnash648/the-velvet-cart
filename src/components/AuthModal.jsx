@@ -10,14 +10,11 @@ const AuthModal = ({ isOpen, onClose }) => {
 
   const modalContent = (
     <div className="fixed inset-0 z-[99999] flex items-center justify-center overflow-auto">
-      {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
         onClick={onClose}
       ></div>
-      {/* Modal */}
       <div className="relative w-full max-w-md mx-4 flex flex-col items-center justify-center bg-transparent pt-10" style={{ maxHeight: '90vh', overflowY: 'auto' }}>
-        {/* Sticky Close button */}
         <div className="sticky top-0 right-0 z-20 flex justify-end w-full -mt-10 mb-2">
           <button
             onClick={onClose}
@@ -29,7 +26,6 @@ const AuthModal = ({ isOpen, onClose }) => {
             </svg>
           </button>
         </div>
-        {/* Content */}
         <div className="w-full">
           {isLogin ? (
             <Login onSwitchToRegister={() => setIsLogin(false)} />
